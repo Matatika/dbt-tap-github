@@ -27,16 +27,16 @@ packages:
 
 ### One time setup (after creating a python virtual environment)
 
-    ```
-    pip install dbt
-    dbt deps
-    ```
+```
+pip install dbt
+dbt deps
+```
 
 ### development
 
-    ```
-    dbt test
-    ```
+```
+dbt test
+```
 
 ## Database Support
 This package has been tested on Postgres and Snowflake.
