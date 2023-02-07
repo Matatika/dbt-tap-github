@@ -1,0 +1,8 @@
+version: 2
+
+models:
+  - name: dim_repositories_snapshot
+  - name: dim_date
+  - name: dim_repositories_history
+  - name: fact_daily_stats
+  - name: fact_stars
