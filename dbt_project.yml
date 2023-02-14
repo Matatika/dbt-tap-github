@@ -15,9 +15,7 @@ snapshot-paths: ["snapshots"]
 models:
   tap_github:
     base:
-      +materialized: table
-    mart:
-      +materialized: table
+      materialized: table
 
 vars:
   schema: "{{ env_var('DBT_TARGET_SCHEMA') }}"
