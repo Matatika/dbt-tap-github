@@ -10,7 +10,7 @@ This package along with the [Analyze Bundle](https://github.com/Matatika/analyze
 | **model**              | **description** |
 | ---------------------- | ------------------------------------------------------------- |
 | [dim_date](models/base/dim_date.sql) | Date dimension |
-| [github_dim_repositories_snapshot](snapshots/dim_repositories_snapshot.sql) | Daily github repository snapshot model |
+| [github_dim_repositories_snapshot](snapshots/github_dim_repositories_snapshot.sql) | Daily github repository snapshot model |
 | [github_dim_repositories_history](models/base/dim_repositories_history.sql) | Github repository history |
 | [github_fact_daily_stats](models/base/fact_daily_.sql) | Github issues and pull request stats by day |
 | [github_fact_stars](models/base/trello_lists.sql) | Github stars gained per day | 
