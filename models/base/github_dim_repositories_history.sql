@@ -16,6 +16,7 @@ dates as (
     select
         *
     from {{ ref('dim_date') }}
+    where date_day <= current_date
 ),
 final as (
     select

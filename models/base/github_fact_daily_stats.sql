@@ -7,6 +7,7 @@ dates as (
     select
         *
     from {{ ref('dim_date') }}
+    where date_day <= current_date
 ),
 daily_created_issues as (
     select
