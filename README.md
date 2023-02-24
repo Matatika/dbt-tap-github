@@ -1,11 +1,19 @@
 # dbt-tap-github
-This dbt package contains models for Meltano's [tap-github](https://github.com/MeltanoLabs/tap-github).
+From [Matatika](https://www.matatika.com/), a dbt package to help with using your GitHub data to let you track targets, see trends and manage your GitHub data.
+
+## Overview
+
+This dbt package contains models designed for use with:
+- Meltano's [tap-github](https://github.com/MeltanoLabs/tap-github)
+- Transferwise's [target-postgres](https://github.com/transferwise/pipelinewise-target-postgres)
 
 The main focus of the package is to transform stream `tap-github` data into usable analytics models.
 
 We have created a snapshot so with daily data syncs and dbt runs, you can get and track historical github information.
 
 This package along with the [Analyze Bundle](https://github.com/Matatika/analyze-github) are designed intended to work together to provide instant insights on the [Matatika Platform](https://www.matatika.com).
+
+## Models
 
 | **model**              | **description** |
 | ---------------------- | ------------------------------------------------------------- |
