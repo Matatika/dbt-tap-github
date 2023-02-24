@@ -13,15 +13,17 @@ We have created a snapshot so with daily data syncs and dbt runs, you can get an
 
 This package along with the [Analyze Bundle](https://github.com/Matatika/analyze-github) are designed intended to work together to provide instant insights on the [Matatika Platform](https://www.matatika.com).
 
+To get the most out of this dbt project, you should ideally run your tap (getting data) and this dbt project (snapshotting and building models) once per day, as the models will try to build and show a daily view of your data.
+
 ## Models
 
 | **model**              | **description** |
 | ---------------------- | ------------------------------------------------------------- |
 | [dim_date](models/base/dim_date.sql) | Date dimension |
 | [github_dim_repositories_snapshot](snapshots/github_dim_repositories_snapshot.sql) | Daily github repository snapshot model |
-| [github_dim_repositories_history](models/base/dim_repositories_history.sql) | Github repository history |
-| [github_fact_daily_stats](models/base/fact_daily_.sql) | Github issues and pull request stats by day |
-| [github_fact_stars](models/base/trello_lists.sql) | Github stars gained per day | 
+| [github_dim_repositories_history](models/base/dim_repositories_history.sql) | Github repository history for each repository and each day you have data about it |
+| [github_fact_daily_stats](models/base/fact_daily_.sql) | Github issues and pull request stats by day across all repositories |
+| [github_fact_stars](models/base/trello_lists.sql) | Github stars gained per day for each repository |
 
 
 ## Installation Instructions
