@@ -35,7 +35,7 @@ count_pull_requests_per_day_per_org_per_repo as (
         "_sdc_batched_at"::date "date"
         , org
         , repo
-        , coalesce(count(*), 0) "pull_requests_open"
+        , coalesce(count(*), 0) "open_pull_requests"
     from most_recent_pull_requests_per_day
     where state = 'open'
     group by "date", org, repo
@@ -49,7 +49,7 @@ join_repositories as (
 final as (
     select
         jr.*
-        , jpr.pull_requests_open
+        , jpr.open_pull_requests
     from join_repositories jr
     left join count_pull_requests_per_day_per_org_per_repo jpr on jpr.date = jr.date_day
     and jpr.org = jr.org
