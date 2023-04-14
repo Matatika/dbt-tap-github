@@ -35,7 +35,7 @@ count_pull_requests_per_day_per_org_per_repo as (
         "_sdc_batched_at"::date "date"
         , org
         , repo
-        , count(*) "pull_requests_open"
+        , coalesce(count(*), 0) "pull_requests_open"
     from most_recent_pull_requests_per_day
     where state = 'open'
     group by "date", org, repo
