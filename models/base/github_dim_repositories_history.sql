@@ -53,7 +53,7 @@ final as (
     from join_repositories jr
     left join count_pull_requests_per_day_per_org_per_repo jpr on jpr.date = jr.date_day
     and jpr.org = jr.org
-    and jpr.repo = jr.repo
+    and jpr.repo = jr."name"
 )
 
 select * from final
