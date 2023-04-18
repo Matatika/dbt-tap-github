@@ -7,3 +7,4 @@ models:
   - name: github_fact_stars
 snapshots:
   - name: github_dim_repositories_snapshot
+  - name: github_dim_pull_requests_snapshot
