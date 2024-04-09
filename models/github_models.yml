@@ -2,9 +2,24 @@ version: 2
 
 models:
   - name: dim_date
+    description: Date dimension, used to ensure there is a row for each day in the daily and history tables.
   - name: github_dim_repositories_history
+    description: Daily stats for repositories, funded from the snapshot.
   - name: github_fact_daily_stats
+    description: Daily number of created and closed issues and prs across all repositories you have data for.
+    columns:
+      - name: created_issues
+        description: Number of issues created on a given day
+      - name: closed_issues
+        description: Number of issues closed on a given day
+      - name: created_prs
+        description: Number of prs created on a given day
+      - name: closed_prs
+        description: Number of prs closed on a given day
   - name: github_fact_stars
+    description: Daily number of stars gained across repositories
 snapshots:
   - name: github_dim_repositories_snapshot
+    description: Snapshot of repository data, so we can keep track of changes over time.
   - name: github_dim_pull_requests_snapshot
+    description: Snapshot of pull requests, so we can keep track of changes over time.
